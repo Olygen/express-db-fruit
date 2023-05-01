@@ -8,12 +8,13 @@ class Index extends React.Component {
       <div>
         <h1>Fruits Index Page</h1>
         <Nav link="/fruits/new" text="Create a Fruit"/>
+            <Nav link="/vegetables" text="See vegetables" />
         <ul>
             {fruits.map((fruit, i) => {
                 return (
                     <li key={i}>
                         The {" "}
-                        <a href={`/fruits/${i}`}>
+                        <a href={`/fruits/${fruit._id}`}>
                             {fruit.name}
                         </a>{" "}
                         is {fruit.color} <br></br>
@@ -30,5 +31,5 @@ class Index extends React.Component {
   }
 }
 
-module.exports = Index
+module.exports = Index;
 
